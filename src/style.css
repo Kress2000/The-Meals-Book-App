@@ -1,0 +1,317 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+
+body{
+    background: rgb(163, 148, 199) !important;
+    font-size: 12px;
+    width: 100vw;
+    display: flex;
+    overflow-x: hidden;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+
+}
+/*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& Title COMPONENTS
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
+
+.app-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.appTitle{
+    color: rgb(163, 148, 199);
+    background: linear-gradient(45deg, rgb(163, 148, 199), rgb(120, 104, 158), blue, rgb(120, 104, 158), rgb(163, 148, 199));
+}
+small{
+    font-style: oblique;
+}
+.title-random-search {
+    display: flex;
+    flex-wrap: wrap-reverse !important;
+
+}
+
+
+
+/*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& RANDOM MEAL COMPONENTS
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
+.app-box--random{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.CardBox{
+    border-radius: .8vw;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    border-bottom-right-radius: 1rem;
+    box-shadow: 0 0  5px 5px rgb(121, 102, 102);
+    transition: transform .5s ease-in-out;
+    background: transparent;
+    flex-grow: 0;
+    height: max-content;
+}
+
+.CardBox:hover{
+    transform: scale(1.01);
+}
+.meal--image{
+    background: none;
+    display: flex;
+    margin-right: 1rem;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.meal--details{
+    background: none;
+    position: relative;
+
+}
+.meal--details h1{
+    font-size: 1.2rem;
+}
+.meal--details .h1{
+    font-size: 1.7rem;
+    font-weight: bolder;
+}
+.description{
+    display: inline-block;
+    text-align: start;
+    font-size: .9rem; 
+}
+
+.details{
+    list-style: none;
+    justify-content: space-between;
+}
+
+.details li{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+
+.details li span{
+    font-size: 1rem;
+    text-decoration: underline;
+}
+
+.details li strong{
+    font-size: .8rem;
+
+}
+
+#viewBtn{
+    position:  absolute;
+    color: rgb(163, 148, 199);
+    bottom: -0.7rem;
+    right: -0.5rem;
+    border-bottom-right-radius: 1rem !important;
+}
+
+.lettersRandom{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+/* //smaller devicces */
+@media (max-width:440px) {
+    .CardBox{
+        width: 100vw !important;
+        display: flex;
+
+    }
+    .meal--image{
+        width: 40vw !important;
+        height: 30vh !important; 
+    }
+    
+    .meal--details{
+        width: 60vw !important;
+    }
+    #viewBtn{
+        right: 0;
+        bottom: 0;
+    }
+    
+    .popup .description{
+        padding: 1rem;
+    }
+    .popup ul{
+        width: 100%;
+    }
+}
+
+
+/*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& popup MEAL COMPONENTS
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
+#popup{
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto !important;
+    background: hsl(263, 27%, 17%);
+    z-index: 3;
+    color: white;
+    transition: all .4s ease-in-out;
+}
+
+.closePage{
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 2rem;
+
+}
+
+.closePage:hover {
+    transition: all .4s ease-in-out;
+    box-shadow: 0 0 1rem 1rem rgba(138, 106, 189, 0.8);
+}
+.popUpViewBox{
+    color: white;
+    width: 100%;
+
+}
+
+.popUpViewBox ul{
+    list-style-type: none;
+    display: grid;
+    width: 70%;
+    margin-left: 2rem;
+    grid-template-columns: 2fr 1fr 1fr; 
+
+}
+.popUpViewBox ul li{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& SEARCH  COMPONENTS
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
+
+.search-container{
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.input{
+    border-radius:  .8rem;
+    padding-left: 1rem;
+    color: black;
+    font-weight: bolder;
+    font-family: inherit;
+    background: rgb(141, 114, 204);
+    border: none;
+    width: 50%;
+}
+
+.input:focus{
+    outline: none;
+}
+
+#btnSearch{
+    border: none;
+    background: none;
+}
+
+.fa-search{
+    font-size: 1.5rem;
+    color: black;
+    border: none;
+    background: none;
+    border-radius: .2rem;
+}
+.fa-search:hover{
+    box-shadow: 0 0 5px 5px rgba(50, 50, 133, .8);
+}
+
+
+.searchBox{
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    height: auto;
+}
+
+.suggestion:focus ~ .suggestions{
+    display:  none !important;
+}
+
+#Search-results{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: auto !important;
+    z-index: 2;
+    padding-bottom: 1rem;
+    background: linear-gradient(45deg, rgb(163, 148, 199), rgb(129, 104, 188), rgb(151, 129, 201));
+    
+}
+
+.WarningSearch{
+    color: red;
+    font-style: oblique;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resultsBox{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-shrink: 1;
+    flex-wrap: wrap;
+    overflow: auto !important;
+    
+}
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& FOOTER COMPONENTS
+************************************************************************************ */
+.footer{
+    background: linear-gradient(45deg, rgb(149, 132, 192), rgb(137, 121, 176), rgb(94, 75, 141));
+}
+.footer--link{
+    text-decoration: none;
+    color: white;
+}
+.footer--link:hover{
+    color: rgb(209, 183, 183);
+    transition: all .4s ease-in-out;
+}
+.footer .text-warning:hover{
+    color: rgb(223, 192, 135);
+    margin-left: 2rem;
+
+}

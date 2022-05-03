@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/The-Meals-Book-App/static/css/main.a25687fa.css",
+    "main.js": "/The-Meals-Book-App/static/js/main.c55cfeae.js",
+    "index.html": "/The-Meals-Book-App/index.html",
+    "main.a25687fa.css.map": "/The-Meals-Book-App/static/css/main.a25687fa.css.map",
+    "main.c55cfeae.js.map": "/The-Meals-Book-App/static/js/main.c55cfeae.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a25687fa.css",
+    "static/js/main.c55cfeae.js"
+  ]
+}
